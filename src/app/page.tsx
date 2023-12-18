@@ -11,7 +11,7 @@ export default async function GalleryPage() {
 
 
       <div className="text-center z-10">
-        <h1 className="text-4xl font-bold mb-4 text-white">Hello, I'm Manas Parmar.</h1>
+        <h1 className="text-4xl font-bold mb-4 text-white">Hello, I&apos;m Manas Parmar.</h1>
         <p className="text-lg text-white">An artist fueled by a passion for design and painting. <br />Explore a glimpse of my artistic journey through a curated collection of my works.</p>
         <br />
         <Link href="/all"><Button variant="default">Enter Now</Button></Link>
