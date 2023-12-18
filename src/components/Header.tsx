@@ -16,7 +16,11 @@ export function Header({
         <nav
             className="flex-no-wrap relative flex w-full items-center justify-between bg-[#FBFBFB] py-2 shadow-md shadow-black/5 dark:bg-neutral-600 dark:shadow-black/10 lg:flex-wrap lg:justify-start lg:py-4">
             <div className="flex w-full flex-wrap items-center justify-between px-3">
-                <Image src="/manas.png" alt="Manas Parmar" className="h-6" width={40} height={20} />
+                <Link
+                    href="/"
+                >
+                    <Image src="/manas.png" alt="Manas Parmar" className="h-6" width={40} height={20} />
+                </Link>
                 <ul
                     className="list-style-none mr-auto flex flex-col pl-0 lg:flex-row"
                     data-te-navbar-nav-ref>
