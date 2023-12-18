@@ -8,7 +8,8 @@ export default async function Page({ params }: { params: { album: string } }) {
     const selectedAlbum = params.album;
 
     const images = params.album === "all" ? Object.values(data).flat() : data[params.album];
-    return <><Albums data={Object.keys(data)} selectedAlbum={selectedAlbum} />
+    return <>
+        <Albums data={Object.keys(data)} selectedAlbum={selectedAlbum} />
         <ImageGrid data={images} />
     </>
 }

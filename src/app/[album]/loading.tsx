@@ -1,11 +1,8 @@
-import SpinnerIcon from '@/icons/Spinner'
-import { Container } from '../../components/Container'
 import ImageGrid from '../../components/ImageGrid'
-import { Albums } from '../../components/Albums'
 
 export default function Loading() {
     return (
-        <Container>
+        <>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 <Loader />
                 <Loader />
@@ -17,7 +14,7 @@ export default function Loading() {
                 <Loader />
             </div>
             <ImageGrid data={[]} />
-        </Container>
+        </>
     )
 }
 

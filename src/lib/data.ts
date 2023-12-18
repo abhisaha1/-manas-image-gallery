@@ -25,7 +25,7 @@ export async function getImages() {
         if (!imagesWithAlbums[album]) {
             imagesWithAlbums[album] = []
         }
-        imagesWithAlbums[album].push({ ...image, blurDataUrl: dataUrls[index] })
+        imagesWithAlbums[album].push({ ...image, blurDataUrl: dataUrls[index], album, caption })
     })
 
     Object.keys(imagesWithAlbums).forEach((album) => {

@@ -9,10 +9,12 @@ interface Props {
     selectedAlbum: string
 }
 export const Albums: FC<Props> = ({ data, selectedAlbum }) => {
-    return <div className="flex gap-4 uppercase text-xs pb-10">
-        <Album key="all" album={"all"} selectedAlbum={selectedAlbum} />
-        {data.map((album) => <Album key={album} album={album} selectedAlbum={selectedAlbum} />)}
-    </div>
+    return (
+        <div className="flex gap-2 uppercase text-xs pb-10">
+            <Album key="all" album={"all"} selectedAlbum={selectedAlbum} />
+            {data.map((album) => <Album key={album} album={album} selectedAlbum={selectedAlbum} />)}
+        </div>
+    )
 }
 
 const Album: FC<{ album: string, selectedAlbum: string }> = ({ album, selectedAlbum }) => {

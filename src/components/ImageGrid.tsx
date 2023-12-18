@@ -20,12 +20,6 @@ export default function ImageGrid({ data }: { data: Array<ImageProps> }) {
         <Suspense>
             <main
                 className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"
-            // className='grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4'
-            // className={clsx(
-            //     'mt-4 columns-1 gap-x-4 gap-y-4',
-            //     'md:columns-3 lg:gap-x-4',
-            //     'lg:columns-3 lg:gap-x-4 lg:gap-y-4',
-            // )}
             >
                 {data.map(({ height, width, public_id, blurDataUrl }, index) => (
                     <Link className="flex items-center bg-slate-800 p-4 rounded-sm" key={public_id} href="#" onClick={(e) => {
@@ -38,12 +32,12 @@ export default function ImageGrid({ data }: { data: Array<ImageProps> }) {
                             src={public_id}
                             sizes="(min-width: 640px) 50vw, (min-width: 768px) 33.3vw, 100vw"
                             alt="Description of my image"
-                            // className='mt-4 md:mt-4 lg:mt-4'
                             placeholder="blur"
                             blurDataURL={blurDataUrl}
                             loading='lazy'
                             format='avif'
                             quality={80}
+
                         />
                     </Link>
                 ))}
@@ -62,6 +56,8 @@ export default function ImageGrid({ data }: { data: Array<ImageProps> }) {
                 plugins={[Thumbnails, Captions]}
                 open={index >= 0}
                 close={() => setIndex(-1)}
+                captions={{ descriptionTextAlign: "center" }}
+
             />
         </Suspense>
     )
